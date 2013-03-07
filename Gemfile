@@ -44,3 +44,5 @@ end
 group :test do
   gem 'capybara', '1.1.2'
 end
+
+gem 'dynamic_form', '1.1.4'

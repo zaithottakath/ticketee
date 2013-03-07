@@ -1,8 +1,14 @@
 require 'spec_helper'
 
 feature 'Creating Projects' do
-  scenario "can create a project" do
+  before do
     visit '/'
+    click_link 'New Project'
+  end
+
+  scenario "can create a project" do
+    #following methods made obsolete with before block
+    #visit '/'
       # FAIL 1 pg 71
       # => click_link 'New Project'
       # => no link with title, id or text 'New Project' found
@@ -35,7 +41,7 @@ feature 'Creating Projects' do
       #Fail 6 pg 77: See fail 1
       #Fix add <%= link_to "New Project", new_project_path %>
 
-    click_link 'New Project'
+    #click_link 'New Project'
     fill_in 'Name', :with => 'TextMate 2'
     fill_in 'Description', :with => "A text-editor for OS X"
     click_button 'Create Project'
@@ -47,5 +53,15 @@ feature 'Creating Projects' do
     title = "TextMate 2 - Projects - Ticketee"
     find("title").should have_content(title)
   end
+
+  scenario "can not create a project without a name" do
+    #following methods made obsolete with before block
+    #visit '/'
+    #click_link 'New Project'
+    click_button 'Create Project'
+    page.should have_content("Project has not been created.")
+    page.should have_content("Name can't be blank")
+  end
+
 end
 
