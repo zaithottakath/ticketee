@@ -3,6 +3,7 @@ require 'spec_helper'
 feature 'Creating Projects' do
   before do
     visit '/'
+    #binding.pry
     click_link 'New Project'
   end
 
@@ -45,7 +46,7 @@ feature 'Creating Projects' do
     fill_in 'Name', :with => 'TextMate 2'
     fill_in 'Description', :with => "A text-editor for OS X"
     click_button 'Create Project'
-    page.should have_content ('Project has been created.')
+    page.should have_content('Project has been created.')
 
     #3.4.4. Setting a page title
     project = Project.find_by_name("TextMate 2")
