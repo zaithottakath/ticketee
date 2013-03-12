@@ -48,6 +48,7 @@ group :test do
   gem 'pry-doc'
   gem 'pry-debugger'
   gem 'launchy'
+  gem 'devise', '2.1.0.rc'
 end
 
 gem 'dynamic_form', '1.1.4'
