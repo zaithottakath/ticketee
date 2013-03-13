@@ -35,4 +35,11 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # The EmailSpec::Helpers module comes from the email_spec gem
+  # and contains methods such as the open_email and
+  # click_first_link_in_email methods that you use in your
+  # signing_in_spec.rb. Once these helpers are included, running bin/rspec
+  # spec/integr...../signing_in_spec.rb should result in something new
+  config.include EmailSpec::Helpers
 end

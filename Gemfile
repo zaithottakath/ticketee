@@ -49,6 +49,7 @@ group :test do
   gem 'pry-debugger'
   gem 'launchy'
   gem 'devise', '2.1.0.rc'
+  gem 'email_spec', '1.2.1'
 end
 
 gem 'dynamic_form', '1.1.4'
