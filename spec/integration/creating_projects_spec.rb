@@ -2,6 +2,7 @@ require 'spec_helper'
 
 feature 'Creating Projects' do
   before do
+    sign_in_as!(Factory(:admin_user))
     visit '/'
     #binding.pry
     click_link 'New Project'
