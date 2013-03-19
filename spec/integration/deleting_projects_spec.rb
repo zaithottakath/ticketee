@@ -3,7 +3,8 @@ require 'spec_helper'
 feature "Deleting projects" do
   before do
     sign_in_as!(Factory(:admin_user))
-end
+
+  end
   scenario "Deleting a project" do
     Factory(:project, :name => "Textmate 2")
     visit "/"
