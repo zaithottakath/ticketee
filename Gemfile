@@ -50,6 +50,7 @@ group :test do
   gem 'launchy'
   gem 'devise', '2.1.0.rc'
   gem 'email_spec', '1.2.1'
+  gem 'cancan', '1.6.7'
 end
 
 gem 'dynamic_form', '1.1.4'
