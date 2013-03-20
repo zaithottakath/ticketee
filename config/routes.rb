@@ -13,8 +13,13 @@ Ticketee::Application.routes.draw do
   #get "admin/users/index"
 
   root :to => "projects#index"
+
   resources :projects do
     resources :tickets
+  end
+
+  resources :tickets do
+    resources :comments
   end
 
   get '/awaiting_confirmation',
