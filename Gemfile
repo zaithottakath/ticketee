@@ -52,6 +52,8 @@ group :test do
   gem 'email_spec', '1.2.1'
   gem 'cancan', '1.6.7'
   gem 'paperclip', '2.7.0'
+  gem 'database_cleaner', '0.7.2'
+
 
 end
 
